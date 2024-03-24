@@ -44,23 +44,3 @@ blocks.forEach((block) => {
     });
 });
 
-async function copyCode(block) {
-    let copiedCode = block.cloneNode(true);
-    copiedCode.removeChild(copiedCode.querySelector("button.button-copy-code"));
-
-    const html = copiedCode.outerHTML.replace(/<[^>]*>?/gm, "");
-
-    block.querySelector("button.button-copy-code").innerHTML = copiedIcon;
-    setTimeout(function () {
-        block.querySelector("button.button-copy-code").innerHTML = copyIcon;
-    }, 2000);
-
-    const parsedHTML = htmlDecode(html);
-
-    await navigator.clipboard.writeText(parsedHTML);
-}
-
-function htmlDecode(input) {
-    const doc = new DOMParser().parseFromString(input, "text/html");
-    return doc.documentElement.textContent;
-}
