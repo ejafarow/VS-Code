@@ -29,11 +29,6 @@
 
 
 
-blocks.forEach((block) => {
-    if (!navigator.clipboard) {
-        return;
-    }
-
     let button = document.createElement("button");
     button.className = "button-copy-code";
     button.innerHTML = copyIcon;
