@@ -27,7 +27,7 @@
 - Theme - Oceanic Next
 - vscode-icons
 
-let blocks = document.querySelectorAll("pre");
+
 
 blocks.forEach((block) => {
     if (!navigator.clipboard) {
