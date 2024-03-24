@@ -28,14 +28,5 @@
 - vscode-icons
 
 
-
-    let button = document.createElement("button");
-    button.className = "button-copy-code";
-    button.innerHTML = copyIcon;
-    block.appendChild(button);
-
-    button.addEventListener("click", async () => {
-        await copyCode(block);
-    });
-});
+``` hello ```
 
